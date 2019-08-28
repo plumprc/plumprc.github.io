@@ -2,8 +2,7 @@
 title: Emoji Test
 category: tutorial
 tags:
-- tutorial
-- example
+- tutorial/example
 ---
 
 This is an emoji test. :smile: lol.
