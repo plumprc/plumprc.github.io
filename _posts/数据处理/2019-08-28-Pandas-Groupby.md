@@ -229,7 +229,7 @@ for ax, race in zip(axes, races):
 ```
 
 
-![png](Pandas-Groupby_files/Pandas-Groupby_8_0.png)
+![png](https://raw.githubusercontent.com/plumprc/plumprc.github.io/master/_posts/%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86/Pandas-Groupby_files/Pandas-Groupby_8_0.png)
 
 
 
@@ -246,7 +246,7 @@ data.groupby('race')['flee'].value_counts().unstack().plot(kind='bar', figsize=(
 
 
 
-![png](Pandas-Groupby_files/Pandas-Groupby_9_1.png)
+![png](https://raw.githubusercontent.com/plumprc/plumprc.github.io/master/_posts/%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86/Pandas-Groupby_files/Pandas-Groupby_9_1.png)
 
 
 ---
@@ -270,7 +270,7 @@ data.groupby('flee')['age'].plot(kind='kde', legend=True, figsize=(20, 5))
 
 
 
-![png](Pandas-Groupby_files/Pandas-Groupby_11_1.png)
+![png](https://raw.githubusercontent.com/plumprc/plumprc.github.io/master/_posts/%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86/Pandas-Groupby_files/Pandas-Groupby_11_1.png)
 
 
 ---
