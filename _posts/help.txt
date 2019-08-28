@@ -1,0 +1,19 @@
+/sourse/index.md  主页首页展示
+/_posts 上传md，注意你上传的md要有时间戳
+jupyter nbconvert --to markdown Pandas-Groupby.ipynb
+
+---
+title: 你的标题
+date: 2019-08-28 16:10:54
+link: http://www.google.com/ 超链接
+categories: (可多可少)
+- ML/DL
+tags: （可多可少，可以没有，最好加上方便检索）
+- ML/DL
+---
+
+- [ ]任务完成 
+
+$行内数学公式$
+
+$$行间数学公式$$
