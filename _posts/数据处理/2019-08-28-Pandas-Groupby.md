@@ -417,10 +417,3 @@ data.groupby('flee')['age'].agg([np.mean, np.median, np.std])
   </tbody>
 </table>
 </div>
-
-
-
-
-```python
-
-```
