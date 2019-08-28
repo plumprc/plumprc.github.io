@@ -1,5 +1,5 @@
 ## Welcome to plum's GitHub Pages!!
 
-- [x] test 
-- [ ] 233
+* [x] 页面的基本配置 
+* [ ] 实现MathJax的部署
 
