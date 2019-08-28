@@ -4,7 +4,7 @@
 # ---------------------------------------------------------------
 
 # Site
-title: 梅
+title: 梅❀
 subtitle:
 description: 晴耕雨读
 author: plumprc
@@ -109,7 +109,7 @@ seo: false
 
 # If true, will add site-subtitle to index page, added in jekyll config.
 # subtitle: Subtitle
-index_with_subtitle: false
+index_with_subtitle: true
 
 # ---------------------------------------------------------------
 # Menu Settings
