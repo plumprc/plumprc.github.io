@@ -5,7 +5,7 @@
 
 # Site
 title: 梅
-subtitle: 尘埃深处
+subtitle: 
 description: 晴耕雨读
 author: plumprc
 # Support language: de, en, fr-FR, id, ja, ko, pt-BR, pt, ru, zh-Hans, zh-hk, zh-tw
@@ -109,7 +109,7 @@ seo: false
 
 # If true, will add site-subtitle to index page, added in jekyll config.
 # subtitle: Subtitle
-index_with_subtitle: true
+index_with_subtitle: false
 
 # ---------------------------------------------------------------
 # Menu Settings
