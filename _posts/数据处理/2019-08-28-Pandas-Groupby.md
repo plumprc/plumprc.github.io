@@ -7,7 +7,7 @@ tags:
 - 数据处理
 ---
 
-## Pandas-groupby
+# Pandas-groupby
 
 
 ```python
@@ -86,7 +86,7 @@ data.sample(3) # randomly
 
 
 ---
-### datas = data.groupby('A')
+## datas = data.groupby('A')
 ![datas = data.groupby('A')](https://upload-images.jianshu.io/upload_images/2862169-51af7d4ae64c2f78.png?imageMogr2/auto-orient/)
 
 
@@ -216,7 +216,7 @@ data.groupby('race')['signs_of_mental_illness'].value_counts().unstack()
 
 ---
 ## Visualization
-Scene1 : The discrete distribution about flee method in different races
+### Scene1 : The discrete distribution about flee method in different races
 
 
 ```python
@@ -250,7 +250,7 @@ data.groupby('race')['flee'].value_counts().unstack().plot(kind='bar', figsize=(
 
 
 ---
-Scene2 : The continuous distribution about flee method in different ages
+### Scene2 : The continuous distribution about flee method in different ages
 
 
 ```python
@@ -274,7 +274,7 @@ data.groupby('flee')['age'].plot(kind='kde', legend=True, figsize=(20, 5))
 
 
 ---
-Scene3 : Apply different operations on different columns
+### Scene3 : Apply different operations on different columns
 
 
 ```python
@@ -350,7 +350,7 @@ data.groupby('race').agg({'age': np.median, 'signs_of_mental_illness': np.mean})
 
 
 ---
-Scene4 : Apply different operations on one column
+### Scene4 : Apply different operations on one column
 
 
 ```python
