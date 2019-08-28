@@ -49,7 +49,7 @@ page:
   tags: 标签
 
 footer:
-  powered: " %s 驱动"
+  powered: " %s -驱动"
   theme: 主题
 
 counter:
