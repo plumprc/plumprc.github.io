@@ -8,6 +8,7 @@
 * [x] 本地搜索
 * [ ] 机器学习入门tutorial
 * [ ] 实现MathJax的部署
+
 </details>
 
 <details>
@@ -21,4 +22,13 @@
 * [ ] LeNet-5和手写识别
 * [ ] ResNet论文解读
 * [ ] 实战示例
+
+</details>
+
+<summary>机器/深度学习简易入门</summary>
+
+* fwfdwf
+    * dwad
+    * dwafwaf
+
 </details>
