@@ -2,20 +2,16 @@
 
 <details>
 <summary>博客功能</summary>
-<p>
 
----
 * [x] 页面的基本配置
 * [x] 标签分类 
 * [x] 本地搜索
 * [ ] 机器学习入门tutorial
 * [ ] 实现MathJax的部署
----
-
-</p>
 </details>
 
 <details>
+
 <summary>机器/深度学习简易入门</summary>
 
 * [ ] 写在前面
@@ -25,5 +21,4 @@
 * [ ] LeNet-5和手写识别
 * [ ] ResNet论文解读
 * [ ] 实战示例
-
 </details>
