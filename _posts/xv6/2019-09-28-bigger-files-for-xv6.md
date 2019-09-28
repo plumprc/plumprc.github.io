@@ -1,15 +1,13 @@
 ---
-title: 你的标题
-date: 2019-08-28 16:10:54
-link: http://www.google.com/ 超链接
-categories: (可多可少)
-- ML/DL
-tags: （可多可少，可以没有，最好加上方便检索）
-- ML/DL
+title: xv6文件系统的扩容
+date: 2019-09-28 18:07:54
+categories:
+- os
+tags:
+- os
 ---
 
-## <center>Bigger files for xv6</center>
-**1、准备措施**
+## 准备措施
 &emsp;&emsp;根据指导书里的内容，将文件`Makefile`下的 CPUS 改为1并在`QEMUOPTS`前添加语句`QEMUEXTRA $=-$snapshot`以加快xv6创建大文件的速率
 ```c
 ifndef CPUS
@@ -40,7 +38,7 @@ $ big
 wrote 140 sectors
 done; ok
 ```
-**2、fs.c/fs.h相关项解读**
+## 2、fs.c/fs.h相关项解读
 &emsp;&emsp;inode定义于头文件`fs.h`内，初始的文件系统含有13个直接指针`NDIRECT`和1个一级间接指针`NINDIRECT`，`addrs`数组的最后一项就是间接块的地址；参数`MAXFILE`表征该文件系统所能指向的数据块数目的最大值，当前为12 + 512 / 4 = 140
 ```c
 #define NDIRECT 12
@@ -93,7 +91,7 @@ bmap(struct inode *ip, uint bn)
 ```
 &emsp;&emsp;我们的主要改动在于`fs.h`指针的重新分配，然后对`bmap`做相应的修改即可
 
-**3、相关修改**
+## 相关修改
 &emsp;&emsp;首先改动`fs.h`内的指针分配，把一个直接指针替换为二级间接指针`DNINDIRECT`，此时文件系统有11个直接指针，一个一级间接指针和一个二级间接指针，`addrs`数组的倒数第二项是第一个间接块的地址，最后一项为第二个间接块的地址。此时`MAXFILE`的值为11 + 512 / 4 + (512 / 4)$^2$ = 16523
 ```c
 #define NDIRECT 11
@@ -113,7 +111,7 @@ struct dinode {
 ```
 &emsp;&emsp;然后为`fs.c`添加二级间接指针的映射关系，这里唯一需要注意的就是**如何计算二级间接指针的逻辑坐标**
 
-![os](https://raw.githubusercontent.com/plumprc/plumprc.github.io/master/_posts/ML%26DL/material/os.png)
+![os](https://raw.githubusercontent.com/plumprc/plumprc.github.io/master/_posts/xv6/material/os.png)
 &emsp;&emsp;如图，记`bn`为逻辑上我们需要的数据块号（比如5000），我们需要知道该块对应的一级间接指针坐标以及逻辑上的二级间接指针坐标，只需要进行如下简单的运算：
 * 一级间接指针坐标：bn / 128
 * 二级间接指针坐标：bn % 128
