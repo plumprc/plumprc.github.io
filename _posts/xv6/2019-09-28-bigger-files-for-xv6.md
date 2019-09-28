@@ -2,9 +2,9 @@
 title: xv6文件系统的扩容
 date: 2019-09-28 18:07:54
 categories:
-- os
+- OS
 tags:
-- os
+- OS
 ---
 
 ## 准备措施
@@ -38,7 +38,7 @@ $ big
 wrote 140 sectors
 done; ok
 ```
-## 2、fs.c/fs.h相关项解读
+## fs.c/fs.h相关项解读
 &emsp;&emsp;inode定义于头文件`fs.h`内，初始的文件系统含有13个直接指针`NDIRECT`和1个一级间接指针`NINDIRECT`，`addrs`数组的最后一项就是间接块的地址；参数`MAXFILE`表征该文件系统所能指向的数据块数目的最大值，当前为12 + 512 / 4 = 140
 ```c
 #define NDIRECT 12
