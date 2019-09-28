@@ -92,7 +92,7 @@ bmap(struct inode *ip, uint bn)
 &emsp;&emsp;我们的主要改动在于`fs.h`指针的重新分配，然后对`bmap`做相应的修改即可
 
 ## 相关修改
-&emsp;&emsp;首先改动`fs.h`内的指针分配，把一个直接指针替换为二级间接指针`DNINDIRECT`，此时文件系统有11个直接指针，一个一级间接指针和一个二级间接指针，`addrs`数组的倒数第二项是第一个间接块的地址，最后一项为第二个间接块的地址。此时`MAXFILE`的值为11 + 512 / 4 + (512 / 4)$^2$ = 16523
+&emsp;&emsp;首先改动`fs.h`内的指针分配，把一个直接指针替换为二级间接指针`DNINDIRECT`，此时文件系统有11个直接指针，一个一级间接指针和一个二级间接指针，`addrs`数组的倒数第二项是第一个间接块的地址，最后一项为第二个间接块的地址。此时`MAXFILE`的值为11 + 512 / 4 + (512 / 4)^2 = 16523
 ```c
 #define NDIRECT 11
 #define NINDIRECT (BSIZE / sizeof(uint))
@@ -112,6 +112,7 @@ struct dinode {
 &emsp;&emsp;然后为`fs.c`添加二级间接指针的映射关系，这里唯一需要注意的就是**如何计算二级间接指针的逻辑坐标**
 
 ![os](https://raw.githubusercontent.com/plumprc/plumprc.github.io/master/_posts/xv6/material/os.png)
+
 &emsp;&emsp;如图，记`bn`为逻辑上我们需要的数据块号（比如5000），我们需要知道该块对应的一级间接指针坐标以及逻辑上的二级间接指针坐标，只需要进行如下简单的运算：
 * 一级间接指针坐标：bn / 128
 * 二级间接指针坐标：bn % 128
