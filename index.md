@@ -30,3 +30,4 @@
 
 * xv6部分实验作业
   * [x] Bigger files
+  * [x] xv6 syscall
