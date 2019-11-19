@@ -1,12 +1,6 @@
-##  
+## Study
 
-### Loading...
-* xv6部分实验作业
-  * [x] Bigger files
-  * [x] xv6 syscall
-  * [x] xv6 cpu alarm
-
-### Loading...
+* 等一个优秀的主界面w
 
 * 机器/深度学习简易入门
   * [x] 前言
@@ -28,3 +22,8 @@
   * [ ] 完成训练并验证
   * [ ] 项目总结
   * [ ] Appendix : 项目技术栈
+
+* xv6部分实验作业
+  * [x] Bigger files
+  * [x] xv6 syscall
+  * [x] xv6 cpu alarm
