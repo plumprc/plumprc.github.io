@@ -5,7 +5,7 @@
 
 # Site
 title: 梅雨明けの
-subtitle:
+subtitle: 
 description: 尘埃深处
 author: plumprc
 # Support language: de, en, fr-FR, id, ja, ko, pt-BR, pt, ru, zh-Hans, zh-hk, zh-tw
@@ -214,8 +214,8 @@ font:
 # Key is the link label showing to end users.
 # Value is the target link (E.g. GitHub: https://github.com/iissnan)
 social:
-  GitHub: https://github.com/plumprc
-  Weibo: https://weibo.com/plumprc
+  Github: https://github.com/plumprc
+  Weibo: https://weibo.com/plumprc/
 
 
 # Social Links Icons
