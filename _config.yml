@@ -4,7 +4,7 @@
 # ---------------------------------------------------------------
 
 # Site
-title: 梅
+title: 梅雨明けの
 subtitle:
 description: 尘埃深处
 author: plumprc
@@ -301,7 +301,7 @@ scroll_to_more: true
 save_scroll: false
 
 # Automatically excerpt description in homepage as preamble text.
-excerpt_description: true
+excerpt_description: false
 
 # Automatically Excerpt. Not recommend.
 # Please use <!-- more --> in the post to control excerpt accurately.
@@ -564,7 +564,7 @@ baidu_push: false
 # API Documentation:
 # https://developers.google.com/google-apps/calendar/v3/reference/events/list
 calendar:
-  enable: true
+  enable: false
   calendar_id: <required>
   api_key: <required>
   orderBy: startTime
@@ -588,7 +588,7 @@ algolia_search:
 
 # Local search
 local_search:
-  enable: false
+  enable: true
   # if auto, trigger search by changing input
   # if manual, trigger search by pressing enter key or search button
   trigger: auto
