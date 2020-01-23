@@ -7,8 +7,9 @@ tags:
 - 数据处理
 ---
 
-# Pandas-groupby
+> <center>pandas-groupby</center>
 
+# Pandas-groupby
 
 ```python
 %matplotlib inline
