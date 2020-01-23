@@ -7,6 +7,8 @@ tags:
 - OS
 ---
 
+inode
+
 ## 准备措施
 &emsp;&emsp;根据指导书里的内容，将文件`Makefile`下的 CPUS 改为1并在`QEMUOPTS`前添加语句`QEMUEXTRA $=-$snapshot`以加快xv6创建大文件的速率
 ```c
@@ -111,7 +113,7 @@ struct dinode {
 ```
 &emsp;&emsp;然后为`fs.c`添加二级间接指针的映射关系，这里唯一需要注意的就是**如何计算二级间接指针的逻辑坐标**
 
-![os](https://raw.githubusercontent.com/plumprc/plumprc.github.io/master/_posts/xv6/material/os.png)
+![os](https://www.jianguoyun.com/c/tblv2/N8VLy45NCbFUXblrEwGmEahYmWokJlZXF_QrAQHOPUi8YXBcfQ5Gnw/ihlmxoODmya4tHDOaNZN_g/l)
 
 &emsp;&emsp;如图，记`bn`为逻辑上我们需要的数据块号（比如5000），我们需要知道该块对应的一级间接指针坐标以及逻辑上的二级间接指针坐标，只需要进行如下简单的运算：
 * 一级间接指针坐标：bn / 128
