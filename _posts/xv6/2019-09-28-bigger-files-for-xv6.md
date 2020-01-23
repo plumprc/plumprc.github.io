@@ -7,7 +7,7 @@ tags:
 - OS
 ---
 
-inode
+> 树形存储的开始：Inode
 
 ## 准备措施
 &emsp;&emsp;根据指导书里的内容，将文件`Makefile`下的 CPUS 改为1并在`QEMUOPTS`前添加语句`QEMUEXTRA $=-$snapshot`以加快xv6创建大文件的速率

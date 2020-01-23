@@ -7,6 +7,8 @@ tags:
 - OS
 ---
 
+> 系统中断与系统调用
+
 ## Part 0: 预备阶段
 &emsp;&emsp;xv6是通过trap（和中断略有不同但处理流程相同）实现系统调用的，以下针对**系统调用的流程**做了具体分析。
 &emsp;&emsp;首先是`vector.pl`（*Generate vectors.S, the trap/interrupt entry points.*）这个perl脚本，它在运行时生成`vector.S`用于存放中断处理程序的入口地址：
