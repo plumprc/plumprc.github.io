@@ -88,7 +88,7 @@ data.sample(3) # randomly
 
 ---
 ## datas = data.groupby('A')
-![datas = data.groupby('A')](https://www.jianguoyun.com/c/tblv2/JPEiC6Ng4oCNNDtrgGi959tYrMJqwLNVxxzPJpVqyK7m-d2xy5fqRgnSE69GykM9eyOz2SZh/s30bgUPKuoP3u57ywy4AOA/l)
+![groupby.png](https://i.loli.net/2020/01/28/x7MAEDmnKpOL8gV.png)
 
 
 ```python
@@ -230,7 +230,7 @@ for ax, race in zip(axes, races):
 ```
 
 
-![groupby8](https://www.jianguoyun.com/c/tblv2/0n8948zw82WcUvU58gw6bQhjyz7EbWWpgrtbGz225vSRt-MnV4vXzz6fbdiKH1gpSQn3q6qU/ZOaZupXw-mPbiHVX-KYFEg/l)
+![Pandas-Groupby_8_0.png](https://i.loli.net/2020/01/28/csfnN9TqKUS6C8w.png)
 
 
 
@@ -247,7 +247,7 @@ data.groupby('race')['flee'].value_counts().unstack().plot(kind='bar', figsize=(
 
 
 
-![groupby9](https://www.jianguoyun.com/c/tblv2/Rk5UQSYeiAhgMc8lCVNABKS4eE0W4xOIp5g7Unsnu8fhc57smshYxU0Lhe_oG2VnMt79cWEE/2w3V7MNPY2jknvydkTIAvA/l)
+![Pandas-Groupby_9_1.png](https://i.loli.net/2020/01/28/bVxgNI4ZiyukzCB.png)
 
 
 ---
@@ -271,7 +271,7 @@ data.groupby('flee')['age'].plot(kind='kde', legend=True, figsize=(20, 5))
 
 
 
-![groupby11](https://www.jianguoyun.com/c/tblv2/gXvuDcklCR1ZIXQ_sKfxnJGDxnzIzmWj4u5pNlXKgXA0R5q2Tf31XY-aQi6_mrGh55E6eojO/2FcjqWJ9ggO0Zt2vlWcJ2Q/l)
+![Pandas-Groupby_11_1.png](https://i.loli.net/2020/01/28/QNGntkg1TRzbxLX.png)
 
 
 ---
