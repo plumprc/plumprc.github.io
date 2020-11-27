@@ -2,9 +2,10 @@
 title: xv6文件系统的扩容
 date: 2019-09-28 18:07:54
 categories:
-- OS
+- 计算机基础
 tags:
-- OS
+- 计算机基础
+- 操作系统
 ---
 
 <center>树形存储的开始：Inode</center>

@@ -2,12 +2,12 @@
 title: Pandas-groupby
 date: 2019-08-28 16:22:54
 categories:
-- 数据处理
+- python
 tags:
-- 数据处理
+- python
 ---
 
-> <center>pandas-groupby</center>
+<center>pandas-groupby 的用法</center>
 
 # Pandas-groupby
 

@@ -2,9 +2,10 @@
 title: xv6的系统调用
 date: 2019-10-15 09:06:33
 categories:
-- OS
+- 计算机基础
 tags:
-- OS
+- 计算机基础
+- 操作系统
 ---
 
 <center>系统中断与系统调用</center>
