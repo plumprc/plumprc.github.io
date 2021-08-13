@@ -9,6 +9,8 @@ tags:
 - 自监督学习
 ---
 
+<center>论文地址：<a href="https://arxiv.org/abs/1807.03748">Representation Learning with Contrastive Predictive Coding</a></center>
+
 ## Background and Motivation
 &emsp;&emsp;推荐阅读：[Contrastive Self-Supervised Learning
 ](https://ankeshanand.com/blog/2020/01/26/contrative-self-supervised-learning.html)
