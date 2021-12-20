@@ -1,11 +1,11 @@
 ---
-title: Machine Learning Tricks
-date: 2021-12-08 16:28:25
+title: Variational Autoencoders
+date: 2021-12-20 16:06:00
 categories:
 - 机器学习
 tags:
 - 机器学习
-- Estimation
+- 表示学习
 ---
 
 <center>PAPER: <a href="https://arxiv.org/abs/1606.05908">Tutorial on Variational Autoencoders</a></center>
