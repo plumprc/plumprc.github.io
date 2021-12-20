@@ -1,5 +1,5 @@
 ---
-title: Machine Learning Tricks
+title: Machine Learning Tricks (unfinished)
 date: 2021-12-08 16:28:25
 categories:
 - 机器学习
@@ -123,3 +123,5 @@ $$r(x)=\frac{p(x)}{q(x)}=\frac{p(x\vert y=+1)}{p(x\vert y=-1)}=\frac{p(y=+1\vert
 &emsp;&emsp;The idea of using classifiers to compute density ratios is widespread. We can see it in many unsupervised learning methods such as contrastive learning and generative adversarial networks.
 
 ## Summary
+
+TODO: ...
