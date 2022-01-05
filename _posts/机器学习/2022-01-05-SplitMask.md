@@ -1,6 +1,6 @@
 ---
 title: SplitMask
-date: 2021-12-27 16:51:00
+date: 2022-01-05 22:32:32
 categories:
 - 机器学习
 tags:
@@ -31,11 +31,11 @@ tags:
 * Reconstruction loss: cross entropy loss
 * Negative samlpes: all the representations of the other images in one mini-batch
 
+---
+
 ![splitmask_tokenizer.png](https://s2.loli.net/2022/01/05/EFrz3QM75pihoJ9.png)
 
 &emsp;&emsp;Notice that SplitMask takes tokens but not patches as input. It has a lightweight and more efficient tokenizers than BEiT. To tokenize an image, they associate each patch to the element of the vocabulary which has the highest cosine similarity with the patch in the pixel space. Figure 1 shows that the tokenizer could not be complicated. Figure 2 shows the effect of split mask and contrastive learning.
-
----
 
 ![splitmask_1.png](https://s2.loli.net/2022/01/05/5xsiNBVIAbF82wW.png)
 
