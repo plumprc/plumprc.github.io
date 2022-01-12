@@ -1,5 +1,5 @@
 ---
-title: Long Sequence Modeling：LongFormer, PoolingFormer
+title: Long Sequence Modeling
 date: 2021-01-10 01:58:18
 categories:
 - 机器学习
@@ -8,7 +8,12 @@ tags:
 - 序列分析
 ---
 
-<center>PAPER: <a href="https://arxiv.org/abs/2004.05150">Longformer: The Long-Document Transformer</a><br><a href="https://arxiv.org/abs/2105.04371">Poolingformer: Long Document Modeling with Pooling Attention</a></center>
+|PAPER
+|:-:
+|<a href="https://arxiv.org/abs/2004.05150">Longformer: The Long-Document Transformer</a>
+|<a href="https://arxiv.org/abs/1901.02860">Transformer-XL: Attentive Language Models Beyond a Fixed-Length Context</a>
+|<a href="https://arxiv.org/abs/2009.06097">Cluster-Former: Clustering-based Sparse Transformer for Long-Range Dependency Encoding</a>
+|<a href="https://arxiv.org/abs/2105.04371">Poolingformer: Long Document Modeling with Pooling Attention</a>
 
 ## Motivations
 &emsp;&emsp;Transformer-based models are unable to process long sequence due to their self-attention operation, which scales quadratically with the sequence length. Thus, most of existing transformer models set the maximum sequence length to 512, which often leads to a worse performance in long sequence tasks.
@@ -41,6 +46,8 @@ $$\text{Attention}(Q,K,V)=\text{softmax}(\frac{QK^T}{\sqrt{d_k}})V$$
 
 ## TODO: Transformer-XL
 
+## TODO: Cluster-Transformer
+
 ## PoolingFormer
 
 ![local_attention.PNG](https://s2.loli.net/2022/01/12/a9xswpY3vZ7h82K.png)
@@ -49,7 +56,7 @@ $$\text{Attention}(Q,K,V)=\text{softmax}(\frac{QK^T}{\sqrt{d_k}})V$$
 
 ![PoolingFormer.png](https://s2.loli.net/2022/01/12/snHvRN9iTmfXD65.png)
 
-&emsp;&emsp;Pooling operation is to compress key and value matrices. In PoolingFormer, they use the lightweight dynamic convolution pooling (LDCConv) as follows:
+&emsp;&emsp;Pooling operation is to compress key and value matrices. In PoolingFormer, they use the lightweight dynamic convolution pooling (LDConv) as follows:
 
 $$\text{LDConv}(v_1,v_2,\dots,v_k)=\sum_{i=1}^k\delta_i\cdot v_i$$
 
