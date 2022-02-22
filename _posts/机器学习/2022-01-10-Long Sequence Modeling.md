@@ -44,7 +44,20 @@ $$\text{Attention}(Q,K,V)=\text{softmax}(\frac{QK^T}{\sqrt{d_k}})V$$
 
 &emsp;&emsp;In fact, it is hard to directly apply LongFormer on other types of long sequences such as time series due to the importance of global attention and position embeddings. Task-specific global attention will bring severe inductive bias which will cause domain shift problem in transfer learning.
 
-## TODO: Transformer-XL
+## Transformer-XL
+&emsp;&emsp;Transformer-XL does not use sparse attention mechanism. It improves conventional approaches which split long sequence into segments by adding recurrence scheme (like residual connection).
+
+![Transformer-XL_1.png](https://s2.loli.net/2022/02/19/yMiHPNVaROxcFkE.png)
+
+![Transformer-XL_2.png](https://s2.loli.net/2022/02/19/sR1KxkhSign7GVO.png)
+
+&emsp;&emsp;The hidden state sequence computed for the previous segment is fixed and cached to be reused as an extended context when the model processes the next new segment. Thus, the largest possible dependency length grows linearly with respect to the number of layers as well as the segment length because representations from the previous segments can be reused instead of being computed from scratch as in the case of the vanilla model.
+
+&emsp;&emsp;To keep the positional information coherent when they reuse the states, Transformer-XL introduces **relative positional encodings** which are only concerned about relative distance of two positions. (i.e. temporal order or bias) Additionally, they propose a new metric RECL to measure the ability of capturing the long context dependency.
+
+![Transformer-XL_comp.png](https://s2.loli.net/2022/02/19/6EzfJRSIOgn2Zq8.png)
+
+&emsp;&emsp;Compared to previous work, Transformer-XL has a quicker speed of training and inference. Recurrence scheme adds relative information between segments and relative positional encodings reduce the complexity of attention. Fixed length of segment and attention may not be a good choice.
 
 ## TODO: Cluster-Transformer
 
