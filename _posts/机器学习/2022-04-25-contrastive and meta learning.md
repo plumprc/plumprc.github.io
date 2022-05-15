@@ -28,7 +28,7 @@ tags:
 * Inner loop: update and save parameters in each step on given support sets
 * Outer loop: sum over all losses on query set across all tasks and update parameters
 
-![MetaContras_2.png](https://s2.loli.net/2022/04/25/LwbGMxtjOsNvASW.png)
+<div align="center"><img src="https://s2.loli.net/2022/04/25/LwbGMxtjOsNvASW.png" width="75%"></img></div>
 
 &emsp;&emsp;For example, a few-shot classification problem refers to classifying samples from some classes (query data) after seeing a few examples per class (support data). In a meta-learning scenario, we consider a distribution of classification tasks, where each task is a few-shot classification problem and different tasks have different target classes. The widely accepted intuition behind MAML is that the models are encouraged to learn general-purpose representations which are are easily transfered to novel tasks. That's similar to the aim of contrastive learning: to learn a good intermediate representation, which is beneficial to enhance the ability of domain adaptation.
 

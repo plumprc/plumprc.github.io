@@ -10,8 +10,6 @@ tags:
 
 <center>PAPER: <a href="https://arxiv.org/abs/2103.15375">AlignMixup: Improving Representations By Interpolating Aligned Features</a></center>
 
-Recommended reading: [mixup](https://plumprc.github.io/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/2022/03/16/mixup/)
-
 ## Motivations
 &emsp;&emsp;Vanilla mixup directly interpolates raw input data and corresponding labels. Recent mixup methods mainly focus on three aspects to improve its performance:
 * Raw input or Latent representation (manifold mixup)
