@@ -38,7 +38,7 @@ $$\text{Attention}(Q,K,V)=\text{softmax}(\frac{QK^T}{\sqrt{d_k}})V$$
 
 &emsp;&emsp;LongFormer combines local and global attention to capture representation from long sequence with $\text{O}(n)$ complexity. In particular, they use small window sizes for the lower layers and increase window sizes as they move to higher layers. They do not use dilated sliding windows for lower layers to maximize their capacity to learn and utilize the immediate local context.
 
-![lf_comp.png](https://s2.loli.net/2022/01/12/Hwn6JEfS1lTeCPX.png)
+<div align="center"><img src="https://s2.loli.net/2022/01/12/Hwn6JEfS1lTeCPX.png" width="75%"/></div>
 
 &emsp;&emsp;LongFormer adds extra position embeddings to support up to position 4096, coping from other pre-tranined models. We can see that LongFormer performs well on long sequence modeling. Performance drops slightly when using the RoBERTa model pretrained when only unfreezing the additional position embeddings.
 
@@ -63,7 +63,7 @@ $$\text{Attention}(Q,K,V)=\text{softmax}(\frac{QK^T}{\sqrt{d_k}})V$$
 
 ## PoolingFormer
 
-![local_attention.PNG](https://s2.loli.net/2022/01/12/a9xswpY3vZ7h82K.png)
+<div align="center"><img src="https://s2.loli.net/2022/01/12/a9xswpY3vZ7h82K.png" width="75%"/></div>
 
 &emsp;&emsp;PoolingFormer consists of two level attention with $\text{O}(n)$ complexity. Its first level uses a smaller sliding window pattern to aggregate information from neighbors. Its second level employs a larger window to increase receptive fields with pooling attention to reduce both computational cost and memory consumption.
 
@@ -75,7 +75,7 @@ $$\text{LDConv}(v_1,v_2,\dots,v_k)=\sum_{i=1}^k\delta_i\cdot v_i$$
 
 &emsp;&emsp;Notice they just modifies some of layers of Transformer-based models. The window sizes of the first-level and second-level is normally set to 128 and 512. In addition, they adopt a residual connection between two levels.
 
-![pf_comp.png](https://s2.loli.net/2022/01/12/n1YHtWyAajfz5ec.png)
+<div align="center"><img src="https://s2.loli.net/2022/01/12/n1YHtWyAajfz5ec.png" width="75%"/></div>
 
 &emsp;&emsp;We conjecture that the reason for the poor performance of 512 windows size is that the self-attention mechanism is difficult
 to deal with remote token due to redundancy noise. We think that for every distant token, there may be too little useful information to compute attention. For the tokens that are very far away, we will discard them directly. In this way, tokens can pay more attention to key information and reduce computation and memory consumed.
