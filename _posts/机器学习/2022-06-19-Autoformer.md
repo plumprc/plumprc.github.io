@@ -1,6 +1,6 @@
 ---
 title: Autoformer
-date: 2022-06-19 22:50:29
+date: 2022-06-19 21:50:29
 categories:
 - 机器学习
 tags:
