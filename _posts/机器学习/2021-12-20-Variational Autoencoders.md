@@ -13,7 +13,7 @@ tags:
 ## Motivations
 &emsp;&emsp;In generative modeling, we often need to get the distribution $p(x)$ of the data $x$. That is to say, if the $x$ looks like the real data, it should get high probability. If the $x$ looks like the random noise, it should get low probability. Formally speaking, real data $x$ is sampled from an unknown distribution $p_t(x)$ and our goal is to learn a model $p$ which we can sample from, such that $p$ is as similar as possible to $p_t$.
 
-![vae.png](https://s2.loli.net/2021/12/19/uQjUxO7hB9RTDW5.png)
+<div align="center"><img src="https://s2.loli.net/2021/12/19/uQjUxO7hB9RTDW5.png" width="75%"/></div>
 
 ## Latent Variable Models
 &emsp;&emsp;Considering the high dimension of the raw data $x$, we should embed $x$ into latent space $z$ which can easily sampled from $p(z)$. Assume we have a family of functions $f(z;\theta)$, where $\theta$ is learnable parameters. Optimize $\theta$ such that $f(z;\theta)$ can produce samples like $x$ with high probability.
