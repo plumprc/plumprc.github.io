@@ -6,8 +6,7 @@ categories:
 tags:
 - 机器学习
 - 自监督学习
-- 表示学习
-- 异常检测
+- 表征学习
 ---
 
 <center>PAPER: <a href="https://arxiv.org/abs/2103.16440">Neural Transformation Learning for Deep Anomaly Detection Beyond Images</a></center>

@@ -5,14 +5,13 @@ categories:
 - 机器学习
 tags:
 - 机器学习
-- 序列分析
+- Transformer
 ---
 
 |PAPER
 |:-:
 |<a href="https://arxiv.org/abs/2004.05150">Longformer: The Long-Document Transformer</a>
 |<a href="https://arxiv.org/abs/1901.02860">Transformer-XL: Attentive Language Models Beyond a Fixed-Length Context</a>
-|<a href="https://arxiv.org/abs/2009.06097">Cluster-Former: Clustering-based Sparse Transformer for Long-Range Dependency Encoding</a>
 |<a href="https://arxiv.org/abs/2105.04371">Poolingformer: Long Document Modeling with Pooling Attention</a>
 
 ## Motivations
@@ -58,8 +57,6 @@ $$\text{Attention}(Q,K,V)=\text{softmax}(\frac{QK^T}{\sqrt{d_k}})V$$
 ![Transformer-XL_comp.png](https://s2.loli.net/2022/02/19/6EzfJRSIOgn2Zq8.png)
 
 &emsp;&emsp;Compared to previous work, Transformer-XL has a quicker speed of training and inference. Recurrence scheme adds relative information between segments and relative positional encodings reduce the complexity of attention. Fixed length of segment and attention may not be a good choice.
-
-## TODO: Cluster-Transformer
 
 ## PoolingFormer
 

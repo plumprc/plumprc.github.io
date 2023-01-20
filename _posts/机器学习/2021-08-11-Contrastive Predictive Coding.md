@@ -1,18 +1,17 @@
 ---
-title: 《Representation Learning with Contrastive Predictive Coding》阅读笔记
+title: Contrastive Predictive Coding
 date: 2021-08-11 17:57:47
 categories:
 - 机器学习
 tags:
 - 机器学习
-- 表示学习
 - 自监督学习
 ---
 
-<center>论文地址：<a href="https://arxiv.org/abs/1807.03748">Representation Learning with Contrastive Predictive Coding</a></center>
+<center>PAPER: <a href="https://arxiv.org/abs/1807.03748">Representation Learning with Contrastive Predictive Coding</a></center>
 
 ## Background and Motivation
-&emsp;&emsp;推荐阅读：[Contrastive Self-Supervised Learning
+&emsp;&emsp;Recommended: [Contrastive Self-Supervised Learning
 ](https://ankeshanand.com/blog/2020/01/26/contrative-self-supervised-learning.html)
 
 * Defects in supervised learning：
@@ -25,8 +24,7 @@ tags:
 
 $$I(x;c)=\sum_{x,c}p(x,c)\log\frac{p(x\vert c)}{p(x)}$$
 
-## Contrastive Predictive Coding(CPC)
-&emsp;&emsp;推荐阅读：[“噪声对比估计”杂谈：曲径通幽之妙](https://kexue.fm/archives/5617/comment-page-1)；[Noise Contrastive Estimation 前世今生——从 NCE 到 InfoNCE](https://zhuanlan.zhihu.com/p/334772391)
+## Contrastive Predictive Coding (CPC)
 
 ![CPC.png](https://i.loli.net/2021/08/13/kj8S9LBsZaJ7u3C.png)
 
@@ -48,6 +46,3 @@ $$p(d=i\vert X,c_t)=\frac{p(d=i,X\vert c_t)}{p(X\vert c_t)}=\frac{p(x_i\vert c_t
 $$I(x_{t+k},c_t)\geq\log N-L_N$$
 
 ![CPC_detail.png](https://i.loli.net/2021/08/13/msKxnL5Egf1vueb.png)
-
-## 笔者注解
-&emsp;&emsp;论文的两个关键部分，源于信号处理的预测编码（predictive coding）是自监督学习的常用辅助任务，注意模型使用的原始数据采样自两段信号的交叠（overlap）；对比损失（contrastive loss）是表示学习的有效策略，核心在于通过大量的负样本对迫使（drive）模型学习合适的特征表示。本文的主要贡献在于提出了针对可序列化数据提高表示学习能力的统一框架 CPC，同时在多个领域贡献了相当丰富的实验数据。笔者认为后续的工作应进一步着眼于如何设计更合理的辅助任务来挖掘时序数据的高效特征表示，以及在负样本的规划上应做进一步的考量。

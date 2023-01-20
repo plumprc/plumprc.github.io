@@ -5,6 +5,7 @@ categories:
 - 机器学习
 tags:
 - 机器学习
+- Transformer
 ---
 
 <center>PAPER: <a href="https://arxiv.org/abs/2111.11418">MetaFormer Is Actually What You Need for Vision</a></center>

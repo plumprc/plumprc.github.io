@@ -1,11 +1,10 @@
 ---
-title: Machine Learning Tricks (unfinished)
+title: Machine Learning Tricks
 date: 2021-12-08 16:28:25
 categories:
 - 机器学习
 tags:
 - 机器学习
-- Estimation
 ---
 
 <center>Original blog：<a href="https://blog.shakirm.com/ml-series/trick-of-the-day/">Machine Learning Trick of the Day</a></center>
@@ -121,7 +120,3 @@ $$r(x)=\frac{p(x)}{q(x)}$$
 $$r(x)=\frac{p(x)}{q(x)}=\frac{p(x\vert y=+1)}{p(x\vert y=-1)}=\frac{p(y=+1\vert x)\cdot p(x)\cdot p(y=-1)}{p(y=-1\vert x)\cdot p(x)\cdot p(y=+1)}=\alpha\frac{S(x)}{1-S(x)}$$
 
 &emsp;&emsp;The idea of using classifiers to compute density ratios is widespread. We can see it in many unsupervised learning methods such as contrastive learning and generative adversarial networks.
-
-## Summary
-
-TODO: ...

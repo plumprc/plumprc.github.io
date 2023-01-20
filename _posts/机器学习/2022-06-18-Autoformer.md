@@ -6,6 +6,7 @@ categories:
 tags:
 - 机器学习
 - 时间序列
+- Transformer
 ---
 
 <center>PAPER: <a href="https://arxiv.org/abs/2106.13008">Autoformer: Decomposition Transformers with Auto-Correlation for Long-Term Series Forecasting</a></center>

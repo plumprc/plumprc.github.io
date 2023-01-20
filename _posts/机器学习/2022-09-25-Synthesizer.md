@@ -5,6 +5,7 @@ categories:
 - 机器学习
 tags:
 - 机器学习
+- Transformer
 ---
 
 <center>PAPER: <a href="https://arxiv.org/abs/2005.00743">Synthesizer: Rethinking Self-Attention for Transformer Models</a></center>

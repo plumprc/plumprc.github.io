@@ -861,7 +861,7 @@ Men-optimal:
 * Multiplication inverse ($a^{-1}$): integer $b$ such that $a\otimes b=1$
 * $\gcd(a,b)=\gcd(b,a\bmod b)$
 
-&emsp;&emsp;According to Bezout theorem $\gcd(a,b)=1\Rightarrow\exist x,y\in\mathbb{Z},ax+by=1$, we can compute inverse of $m$ in $\mathbb{Z}_n$ by `exgcd`. Consider `gcd(47,30)=1`, we can get that $30^{-1}=11$.
+&emsp;&emsp;According to Bezout theorem $\gcd(a,b)=1\Rightarrow\exists x,y\in\mathbb{Z},ax+by=1$, we can compute inverse of $m$ in $\mathbb{Z}_n$ by `exgcd`. Consider `gcd(47,30)=1`, we can get that $30^{-1}=11$.
 
 $$\begin{matrix}
   47=30\times1+17 & 1=13\times1+4\times(-3) \\

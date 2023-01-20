@@ -5,7 +5,7 @@ categories:
 - 机器学习
 tags:
 - 机器学习
-- 表示学习
+- 生成模型
 ---
 
 <center>PAPER: <a href="https://arxiv.org/abs/1606.05908">Tutorial on Variational Autoencoders</a></center>

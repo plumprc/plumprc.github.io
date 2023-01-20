@@ -1,11 +1,11 @@
 ---
-title: 自监督表示学习（未完成）
+title: Self-Supervised Representation Learning
 date: 2021-12-21 00:20:06
 categories:
 - 机器学习
 tags:
 - 机器学习
-- 表示学习
+- 表征学习
 - 自监督学习
 ---
 
@@ -109,10 +109,6 @@ $$L(x,x^+,x^-)=\sum_{x\in X}\max(0,D(x,x^+)-D(x,x^-)+\varepsilon)$$
 
 &emsp;&emsp;The [model](https://arxiv.org/abs/1806.09594) takes two neighboring grayscale frames as input. Using softmax similarity, the model points from the target frame into the reference frame embeddings and then copies the color back into the predicted frame. It works well when downstream task is about video segmentation.
 
----
-
-TODO: video transformer
-
 ## Contrastive Learning
 &emsp;&emsp;The goal of contrastive representation learning is to learn such an embedding space in which similar sample pairs stay close to each other while dissimilar ones are far apart. (To some extent similar to metric learning.) Key ingredients are as follows:
 * **Heavy Data Augmentation**: It introduces the non-essential variations into examples without modifying semantic meanings.
@@ -163,7 +159,4 @@ $$\begin{aligned}
 
 ### Common Setup
 
-TODO: [Understanding Contrastive Representation Learning through Alignment and Uniformity on the Hypersphere]()
-
-## Conclusion
-* auxiliary task -> prompt
+<center><a href="https://arxiv.org/abs/2005.10242">Understanding Contrastive Representation Learning through Alignment and Uniformity on the Hypersphere</a></center>
