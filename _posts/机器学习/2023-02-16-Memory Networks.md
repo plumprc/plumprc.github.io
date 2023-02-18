@@ -40,7 +40,7 @@ where $W_1,W_2\in\mathbb{R}^{d_h\times d}$ and $b_1,b_2$ indicate bias terms. In
 
 &emsp;&emsp;Although the self-attention, FFN, and key-value memory networks have a similar formulation, previous works have not carefully discussed the impact of activation functions. [Kai, et al.](https://arxiv.org/abs/2302.06461) thoroughly investigated the difference between ReLU and softmax in self-attention and FFN. In general, softmax provides exponential normalization over all value slots and therefore highlights a small number of them while neglecting others, which may cause performance degradation when the number of slots is large. ReLU bypasses this problem but faces a variance exploding problem. The FFN and key-value memory with additional layer normalization are equivalent, and ReLU shows stronger capacity when dealing with a large number of values than softmax.
 
-![]()
+![Imgur](https://i.imgur.com/Zkgoxrd.png)
 
 &emsp;&emsp;However, directly replacing the softmax with ReLU in self-attention may induce the model fails to converge. To control the variance exploding caused by ReLU, they introduce the scaling factor and a regularization loss to alleviate this problem. Given $n$ random variables $x_i\sim N(0,1)$ and $v_i\sim N(0,1)$, we have
 
