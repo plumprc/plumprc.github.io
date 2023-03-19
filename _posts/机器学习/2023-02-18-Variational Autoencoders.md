@@ -61,15 +61,15 @@ $$\arg\max_\theta p(x)=\int p(x\vert z;\theta)\cdot p(z)\text{d}z$$
 * How to define the latent variables $z$?
 * How to deal with the integral over $z$?
 
-&emsp;&emsp;VAE assumes that there is no simple interpretation of the dimensions of $z$ and instead asserts that samples of $z$ can be drawn from a simple Gaussian distribution $p(z)\sim N(0,1)$. Then we can sample a large number of $z$ values to estimate $p(x)\approx\frac{1}{n}\sum_ip_\theta(x\vert z_i)$. However, $p_\theta(x\vert z)$ will be nearly zero for most $z$. The key idea behind VAE is to attempt to sample values of $z$ that are likely to have produced $x$, which means we need to learn a new approximation function $q_\phi(z\vert x)$ where we can get a distribution over $z$ values which are likely to produce $x$. Then we should make $q_\phi(z\vert x)$ and the true posterior distribution $p(z\vert x)$ more similar (i.e. minimize the KL divergence between them) so that we can estimate $p(x)\approx\mathbb{E}_{z\sim q}p_\theta(x\vert z)$.
+&emsp;&emsp;VAE assumes that there is no simple interpretation of the dimensions of $z$ and instead asserts that samples of $z$ can be drawn from a simple Gaussian distribution $p(z)\sim N(0,1)$. Then we can sample a large number of $z$ values to estimate $p(x)\approx\frac{1}{n}\sum_ip_\theta(x\vert z_i)$. However, $p_\theta(x\vert z)$ will be nearly zero for most $z$. The key idea behind VAE is to attempt to sample values of $z$ that are likely to have produced $x$, which means we need to learn a new approximation function $q_\phi(z)$ where we can get a distribution over $z$ values which are likely to produce $x$. Then we should make $q_\phi(z)$ and the true posterior distribution $p(z\vert x)$ more similar (i.e. minimize the KL divergence between them) so that we can estimate $p(x)\approx\mathbb{E}_{z\sim q}p_\theta(x\vert z)$.
 
-$$KL(q(z\vert x)\Vert p(z\vert x))=\mathbb{E}_{z\sim q}[\log q(z\vert x)-\log p(z\vert x)]$$
+$$KL(q(z)\Vert p(z\vert x))=\mathbb{E}_{z\sim q}[\log q(z)-\log p(z\vert x)]$$
 
 $$\log p(z\vert x)=\log p(x\vert z)+\log p(z)-\log p(x)$$
 
-$$\log p(x)-D(q(z\vert x),p(z\vert x))=\mathbb{E}_{z\sim q}\log p(x\vert z)-KL(q(z\vert x)\Vert p(z))$$
+$$\log p(x)-D(q(z),p(z\vert x))=\mathbb{E}_{z\sim q}\log p(x\vert z)-KL(q(z)\Vert p(z))$$
 
-&emsp;&emsp;Our goal is to maximize $p(x)$ and minimize $D(q(z\vert x),p(z\vert x))$, which is equal to optimize the right hand side of the equation:
+&emsp;&emsp;Our goal is to maximize $p(x)$ and minimize $D(q(z),p(z\vert x))$, which is equal to optimize the right hand side of the equation:
 * maximize the expectation of the reconstruction of data points from the latent vector
 * minimize the divergence between the estimated latent vector and the true latent vector
 
@@ -79,7 +79,7 @@ $$\log p(x)-D(q(z\vert x),p(z\vert x))=\mathbb{E}_{z\sim q}\log p(x\vert z)-KL(q
 
 $$z=\mu+\sigma\odot\varepsilon$$
 
-$$-L_{\theta,\phi}=\mathbb{E}_{\varepsilon\sim N(0,1)}\log p_\theta(x\vert z)-KL(q_\phi(z\vert x)\Vert p_\theta(z))\leq\log p(x)$$
+$$-L_{\theta,\phi}=\mathbb{E}_{\varepsilon\sim N(0,1)}\log p_\theta(x\vert z)-KL(q_\phi(z)\Vert p_\theta(z))\leq\log p(x)$$
 
 $$\begin{aligned}
     KL(N(\mu,\sigma^2)\Vert N(0,1)) &= \int\frac{1}{\sqrt{2\pi\sigma^2}}e^{-(x-\mu)^2/2\sigma^2}\cdot\log\frac{e^{-(x-\mu)^2/2\sigma^2}/\sqrt{2\pi\sigma^2}}{e^{-x^2/2}/\sqrt{2\pi}}\text{d}x \\
@@ -134,7 +134,7 @@ class VAE(nn.Module):
 
 ![recon_image.png](https://s2.loli.net/2021/12/19/Dbr3H4vpC1ywh9Q.png)
 
-&emsp;&emsp;In essence, VAE postulates that each data corresponds to a Gaussian distribution $p_\theta(z\vert x)$. Our goal is to learn a generator $q_\phi(z\vert x)$ and narrow the space of $z$ via minimizing the KL divergence between $p_\theta(z\vert x)$ and $N(0,1)$ for better sampling and generation. $-L_{\theta,\phi}$ is actually the Evidence Lower Bound (ELBO) of $\log p(x)$, which is derived from variational inference. That's why we call it VAE.
+&emsp;&emsp;In essence, VAE postulates that each data corresponds to a Gaussian distribution $p_\theta(z\vert x)$. Our goal is to learn a generator $q_\phi(z)$ and narrow the space of $z$ via minimizing the KL divergence between $p_\theta(z\vert x)$ and $N(0,1)$ for better sampling and generation. $-L_{\theta,\phi}$ is actually the Evidence Lower Bound (ELBO) of $\log p(x)$, which is derived from variational inference. That's why we call it VAE.
 
 ## Conditional Variational Autoencoders
 &emsp;&emsp;To control the generation output, we can introduce the conditional context like label information to the input as $p(x\vert z,c)$. Here we provide an example of CVAE to generate the number "1", "4" and "8" in MINST where we utilize the one-hot label as the conditional context.
