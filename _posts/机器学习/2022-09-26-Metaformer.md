@@ -11,7 +11,7 @@ tags:
 <center>PAPER: <a href="https://arxiv.org/abs/2111.11418">MetaFormer Is Actually What You Need for Vision</a></center>
 
 ## Metaformer
-&emsp;&emsp;Metaformer is actually a special implementation of synthesizer in computer vision, which is illustrated as below. In vision tasks, we always require a token mixer and a channel mixer to learn token-wise and channel-wise information. In fact, synthesizers reveal that specific mixers are not necessary. A random initialized matrix can capture token-token interaction.
+&emsp;&emsp;Metaformer is a special implementation of Synthesizer in computer vision, which is illustrated below. In vision tasks, we generally require a token mixer and a channel mixer to learn token-wise and channel-wise information. However, synthesizers reveal that specific mixers are not necessary. A random initialized matrix can capture token-token interaction. It is worth mentioning that [AlterNet](https://arxiv.org/abs/2202.06709) also thoroughly investigates how Vision Transformers work, finding that the attention in ViT ensembles input tokens as a trainable spatial smoothing of feature maps and flatten loss landscapes, inducing better performance and robustness due to data-specific aggregation instead of long-range dependency. (notably, MLP-Mixer underperforms compared to ViTs) See the original paper for more details.
 
 ![Imgur](https://i.imgur.com/KtGGISL.png)
 
