@@ -15,7 +15,7 @@ tags:
 |<a href="https://arxiv.org/abs/1312.6114">Auto-Encoding Variational Bayes</a>
 |<a href="https://arxiv.org/abs/1606.05908">Tutorial on Variational Autoencoders</a>
 
-### Autoencoders
+## Autoencoders
 &emsp;&emsp;Autoencoders generally contains an encoder and decoder. The encoder $f_\theta$ projects the original input $x$ into the latent representation $z$, and the decoder $g_\phi$ reconstructs the input data from $z$. That is, Autoencoders are used to learn an identical map between the input and output, which are suitable for most compression/decompression tasks.
 
 $$x\xrightarrow{f_\theta}z\xrightarrow{g_\phi}\tilde{x}$$
@@ -73,7 +73,7 @@ $$\log p(x)-D(q(z),p(z\vert x))=\mathbb{E}_{z\sim q}\log p(x\vert z)-KL(q(z)\Ver
 * maximize the expectation of the reconstruction of data points from the latent vector
 * minimize the divergence between the estimated latent vector and the true latent vector
 
-&emsp;&emsp;To apply SGD on the right hand side of above equation, we should specify all the terms. We know $p(z)\sim N(0,1)$ and $q$ is often initialized as Gaussian with learnable mean and variance. The expectation $\mathbb{E}_{z\sim q}\log p(x\vert z)$ can be estimated by [reparameterization trick]().
+&emsp;&emsp;To apply SGD on the right hand side of above equation, we should specify all the terms. We know $p(z)\sim N(0,1)$ and $q$ is often initialized as Gaussian with learnable mean and variance. The expectation $\mathbb{E}_{z\sim q}\log p(x\vert z)$ can be estimated by [reparameterization trick](https://gregorygundersen.com/blog/2018/04/29/reparameterization/).
 
 ![VAE.png](https://s2.loli.net/2021/12/16/IrnsQz2dLAb47w8.png)
 
